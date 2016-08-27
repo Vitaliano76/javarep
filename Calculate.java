@@ -1,9 +1,30 @@
 public class Calculate{
-	public static void main(String[] args){
-		System.out.println("Calculate");
-		int first = Integer.valueOf(args[0]);
-		int second = Integer.valueOf(args[1]);
-		int summ = first + second;
-		System.out.println("Sum = " + summ);
+	private int result;
+	
+	public void add(int... params){
+		for(Integer param: params) {
+			this.result += param;
+		}
+	}
+	public void minus(int... params) {
+		for (Integer param : params) {
+			this.result -= param;
+		}
+	}
+
+	public void multipliy(int... params) {
+			this.result = params[0]*params[1];
+	}
+
+	public void devide(int... params) {
+		this.result = params[0]/params[1];
+	}
+
+	public int getResult(){
+	  return this.result;
+	}
+
+	public void clearResult(){
+	  this.result = 0;
 	}
 }
