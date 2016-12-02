@@ -1,15 +1,12 @@
+package com.lesson.lessons;
 public class Calculate{
 	private int result;
 	
 	public void add(int... params){
-		for(Integer param: params) {
-			this.result += param;
-		}
+		this.result = params[0]+params[1];
 	}
 	public void minus(int... params) {
-		for (Integer param : params) {
-			this.result -= param;
-		}
+		this.result = params[0]-params[1];
 	}
 
 	public void multipliy(int... params) {

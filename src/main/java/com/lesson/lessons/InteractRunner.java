@@ -1,3 +1,4 @@
+package com.lesson.lessons;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,23 +16,16 @@ public class InteractRunner{
                 int second = Integer.parseInt(reader.readLine());
                 System.out.println("Enter operation");
                 String op = reader.readLine();
-                switch (op){
-                    case "+":{calc.add(first, second);
-                        break;
-                    }
-                    case "-":{calc.minus(first, second);
-                        break;
-                    }
-                    case "*":{calc.multipliy(first, second);
-                        break;
-                    }
-                    case "/":{calc.devide(first, second);
-                        break;
-                    }
-                    default:{
-                        System.out.println("What is this?");
-                    }
-
+                if (op.equals("+")) {
+                    calc.add(first, second);
+                } else if (op.equals("-")) {
+                    calc.minus(first, second);
+                } else if (op.equals("*")) {
+                    calc.multipliy(first, second);
+                } else if (op.equals("/")) {
+                    calc.devide(first, second);
+                } else {
+                    System.out.println("What is this?");
                 }
                 System.out.println("Result :" + calc.getResult());
                 System.out.println("Exit yes/no");
